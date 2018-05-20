@@ -1,0 +1,9 @@
+version: "0.1.0"
+pre_ci_boot: 
+    image: index.alauda.cn/demo100/piggyjava 
+    tag: latest
+
+ci:
+    - cd  service-B3
+    - mvn -Dmaven.test.skip package
+    - cp ./target/service-B3-0.0.1-SNAPSHOT.jar $ALAUDACI_UPLOAD_DIR

@@ -30,7 +30,7 @@ public class ComputeController {
     @RequestMapping(value="testServiceB",method=RequestMethod.GET)
     public String testServiceB(@RequestParam Integer a,@RequestParam Integer b){
     	RestTemplate restTemplate=new RestTemplate();
-    	return restTemplate.getForObject("http://localhost:7078/add?a="+a+"&b="+b, String.class);
+    	return restTemplate.getForObject("http://serviceb-test:7078/add?a="+a+"&b="+b, String.class);
     }
     
 }
