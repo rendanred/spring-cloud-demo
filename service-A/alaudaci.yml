@@ -6,4 +6,4 @@ pre_ci_boot:
 ci:
     - cd  service-A
     - mvn -Dmaven.test.skip package
-    - cp ./target/service-A.jar $ALAUDACI_UPLOAD_DIR
+    - cp ./target/classes/service-A.jar $ALAUDACI_UPLOAD_DIR
